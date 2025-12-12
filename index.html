@@ -7,7 +7,9 @@
 <style>
   :root {
     --cell: 64px; /* cell size */
-    --gap: 15px;   /* grid gap */
+    --gap: 28px;   /* grid gap */
+    --clue-pad: 19px;
+    --clue-d: calc(var(--gap) - var(--clue-pad) * 2);
     --bg: #0d1117;
     --panel: #111827;
     --ink: #e5e7eb;
@@ -147,8 +149,8 @@
       for(let vc=1; vc<C; vc++){
         const clue=document.createElement('div');
         clue.className='clue';
-        const x = vc*cellSize + (vc-0.5)*gap;
-        const y = vr*cellSize + (vr-0.5)*gap;
+        const x = vc*cellSize + (vc-0.004)*gap;
+        const y = vr*cellSize + (vr-0.002)*gap;
         clue.style.left = `${x}px`;
         clue.style.top  = `${y}px`;
         clue.dataset.vr=vr-1; clue.dataset.vc=vc-1;
