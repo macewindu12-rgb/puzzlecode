@@ -24,13 +24,13 @@
     background: radial-gradient(1200px 600px at 25% -10%, #1f2937, var(--bg));
     color: var(--ink);
   }
-  header { padding: 16px 20px; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header { padding: 20px 28px; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
   header h1 { font-size: 18px; font-weight: 700; margin: 0 8px 0 0; letter-spacing:.3px; }
   .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
   .controls label { font-size: 13px; opacity:.9; }
   button, input, select { 
     background:#0b1220; color:var(--ink); border:1px solid #243b55; border-radius:10px;
-    padding:10px 12px; font-weight:600; letter-spacing:.2px; cursor:pointer; 
+    padding:10px 12px; font-weight:800; letter-spacing:.2px; cursor:pointer; 
   }
   button:hover { border-color:#3b82f6; box-shadow:0 0 0 2px #1f2a44 inset; }
   .pill { border-radius:999px; }
@@ -65,7 +65,7 @@
            box-shadow:0 10px 30px rgba(0,0,0,.4); display:none; }
   .toast.show { display:block; animation: pop .35s ease; }
   @keyframes pop { from { transform:translateX(-50%) translateY(6px); opacity:.0 } to { transform:translateX(-50%) translateY(0); opacity:1 } }
-  .legend { font-size:12px; color:#9ca3af; }
+  .legend { font-size:18px; color:#9ca3af; }
 </style>
 </head>
 <body>
@@ -196,7 +196,7 @@
       }
     }
     toast.classList.add('show');
-    setTimeout(()=>toast.classList.remove('show'), 2000);
+    setTimeout(()=>toast.classList.remove('show'), 10000);
   }
 
   function newPuzzle(){
